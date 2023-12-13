@@ -16,7 +16,7 @@
       {
         "customType": "regex",
         "fileMatch": ["^Dockerfile$"],
-        "matchStrings": ["datasource=(?<datasource>.*?) packageName=(?<packageName>.*?)\\sENV .*?_VERSION=(?<currentValue>.*)\\s"]
+        "matchStrings": ["datasource=(?<datasource>.*?) depName=(?<depName>.*?)\\sENV .*?_VERSION=(?<currentValue>.*)\\s"]
       }
     ]
   }
