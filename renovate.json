@@ -6,10 +6,9 @@
     "packageRules": [
       {
         "allowedVersions": "<3.2.0",
-        "matchBaseBranches": "3.1",
         "matchManagers": ["regex"],
         "matchPackageNames": ["openssl/openssl"],
-        "extractVersion": "OpenSSL (?<version>.*)$"
+        "extractVersion": "^openssl-(?<version>.*)$"
       }
     ],
     "customManagers": [
