@@ -1,0 +1,22 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+      "config:recommended"
+    ],
+    "packageRules": [
+      {
+        "allowedVersions": "<3.2.0",
+        "matchBaseBranches": "3.1",
+        "matchManagers": ["regex"],
+        "matchPackageNames": ["openssl/openssl"],
+        "extractVersion": "OpenSSL (?<version>.*)$"
+      }
+    ],
+    "customManagers": [
+      {
+        "customType": "regex",
+        "fileMatch": ["^Dockerfile$"],
+        "matchStrings": ["datasource=(?<datasource>.*?) depName=(?<depName>.*?) versioning=(?<versioning>.*?)?\\sENV .*?_VERSION=(?<currentValue>.*)\\s"]
+      }
+    ]
+  }
