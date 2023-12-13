@@ -1,6 +1,6 @@
-FROM ubuntu:23.10
+FROM ubuntu
 
- # renovate: datasource=github-releases depName=openssl/openssl versioning=semver
+# renovate: datasource=github-tags depName=openssl/openssl
 ENV OPENSSL_VERSION=3.1.3
 
 ENTRYPOINT /bin/bash

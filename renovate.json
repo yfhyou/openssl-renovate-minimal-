@@ -6,17 +6,16 @@
     "packageRules": [
       {
         "allowedVersions": "<3.2.0",
-        "matchBaseBranches": "3.1",
         "matchManagers": ["regex"],
         "matchPackageNames": ["openssl/openssl"],
-        "extractVersion": "OpenSSL (?<version>.*)$"
+        "extractVersion": "^openssl-(?<version>.*)$"
       }
     ],
     "customManagers": [
       {
         "customType": "regex",
         "fileMatch": ["^Dockerfile$"],
-        "matchStrings": ["datasource=(?<datasource>.*?) depName=(?<depName>.*?) versioning=(?<versioning>.*?)?\\sENV .*?_VERSION=(?<currentValue>.*)\\s"]
+        "matchStrings": ["datasource=(?<datasource>.*?) depName=(?<depName>.*?)\\sENV .*?_VERSION=(?<currentValue>.*)\\s"]
       }
     ]
   }
